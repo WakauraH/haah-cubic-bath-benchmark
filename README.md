@@ -11,7 +11,7 @@ Everything quoted in the paper traces to a file in `results/`; `results/MANIFEST
 ```bash
 pip install -r requirements.txt      # numpy, scipy, numba, matplotlib, pytest
 make check                           # ~15 s on 16 cores: construction, decoder, derived numbers, figures, two bit-reproducible MC points
-make check-all                       # + L=2 exact master equation vs Gillespie, OU sigma->0 self-test (minutes)
+make check-all                       # + L=2 exact master equation vs Gillespie, OU sigma->0 self-test (~8 min)
 make numbers                         # regenerate results/derived_numbers.json
 make figs                            # regenerate paper/figs/*.pdf
 ```
