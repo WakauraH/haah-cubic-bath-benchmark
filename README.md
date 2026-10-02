@@ -41,19 +41,21 @@ All commands run from `scripts/`. The output file name is `results/tmem_beta<bet
 | Code check | `python3 haah_check.py` / `python3 haah_code.py` | seconds |
 | Decoder self-test | `python3 haah_tmem.py selftest` | seconds |
 | L=2 exact master equation vs Gillespie | `python3 haah_davies.py` → `results/tier1_validation.json` | minutes |
-| Flat bath, β=4.5, L=5–13 | `python3 haah_tmem_fast.py 4.5 5,7,9,11,13 100 _fast_flat` | ~10 min |
-| Flat bath beyond L\* | `python3 haah_tmem_fast.py 4.5 17 100 _fast_flat_L17`; `... 19 100 _fast_flat_L19` | 17 min; 25 min |
-| Flat bath, β=5.0 | `python3 haah_tmem_fast.py 5.0 5,7,9,11,13 60 _fast_flat` | ~1 h |
-| Channel filter `(s4,s2,s0)` | `python3 haah_tmem_fast.py 4.5 5,7,9,11,13 100 _fast_s0_0.01 1,1,0.01` (and likewise for each row of Table I) | minutes to ~30 min |
+| Flat bath, β=4.5, L=5–13 | `python3 haah_tmem_fast.py 4.5 5,7,9,11,13 100 _fast_flat` | 7 min |
+| Flat bath beyond L\* | `python3 haah_tmem_fast.py 4.5 17 100 _fast_flat_L17`; `... 19 100 _fast_flat_L19` | 17 min; 24 min |
+| Flat bath, β=5.0, L=5–11 | `python3 haah_tmem_fast.py 5.0 5,7,9,11 60 _fast_flat` | 5 min |
+| Channel filter `(s4,s2,s0)` | `python3 haah_tmem_fast.py 4.5 5,7,9,11,13 100 _fast_s0_0.01 1,1,0.01` (and likewise for each row of Table I) | 2–8 min per series; 38 min for `s0=10` |
 | Filtered bath beyond L\* | `python3 haah_tmem_fast.py 4.5 17 100 _fast_s0_0.01_L17 1,1,0.01`; `... 19 ... _L19 ...` | 14 min; 33 min |
 | Creation-limited crossover | `python3 haah_tmem_fast.py 4.5 9 100 _gapC_s4_3e-4 3e-4,1,1` (and `1e-4`) | minutes |
-| Effective temperature β′ | `python3 haah_tmem_fast.py 4.7 5,7,9,11,13 100 _fast_flat_lamb` (also 4.875, 5.06) | ~20–60 min each |
-| OU-modulated diffusion rate | `python3 haah_tmem_ou.py 4.5 9 100 2.0 1,100,1e6` → `results/h2ou_beta4.5_L9_sigma2.0.json` (merges per τ_c) | minutes |
+| Effective temperature β′ | `python3 haah_tmem_fast.py 4.7 5,7,9,11,13 100 _fast_flat_lamb` (also 4.875, 5.06) | 13, 28, 57 min |
+| OU-modulated diffusion rate | `python3 haah_tmem_ou.py 4.5 9 100 2.0 1,100,1e6` → `results/h2ou_beta4.5_L9_sigma2.0.json` (merges per τ_c) | 1–5 min per τ_c; the `τ_c=0.01` point of the σ=1 series took 5 h |
 | Quenched OU points | `python3 haah_tmem_ou.py 4.5 9 200 2.0 1e10` (also L=7, 11 at σ=2; L=9 at σ=1) | 1–7 min |
 | OU σ→0 self-test | `python3 haah_tmem_ou.py selftest` | minutes |
 | Pseudomode models | `python3 pseudomode_gap.py`, `pseudomode_twodefect.py`, `pseudomode_cutoff_sweep.py`, `pseudomode_uniqueness.py` | seconds each |
 | Derived numbers (Tables I–III, Sec. III) | `python3 protocol_f.py` → `results/derived_numbers.json` | seconds |
 | Figures | `python3 ../paper/figs/make_figs.py` (from the repository root: `python3 paper/figs/make_figs.py`) | seconds |
+
+The checks in `tests/` write `results/*_pytest_*.json`, which are ignored by git.
 
 CLI of `haah_tmem_fast.py`: `<beta> <L,..> <nsamp> [tag] [s4,s2,s0] [seed_offset] [Ltqo|auto]`. `Ltqo` defaults to `L-2`; a trial decoding runs every `T_ec = e^{4β}/100`; the memory time of a run is the first trial at which the RG decoder fails or returns a logical error.
 
