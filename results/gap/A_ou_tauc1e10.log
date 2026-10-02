@@ -1,0 +1,2 @@
+L=9 beta=4.5 tau_c=1e+10 sigma=2.0 n=200 Tmem=8.39e+08 ± 1e+08 Tmem/Tec=1278.4 modes={'decoder': 200} (52s)
+done

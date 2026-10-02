@@ -1,0 +1,6 @@
+selftest ok: L=5 all weight-1; L=9 (k=2, pM=1) random weight-2: 1.00, weight-3: 0.96 corrected (85s)
+L=5 beta=4.5 k=2 n=20 Tmem=2.69e+07 ± 6.2e+06  Tmem/Tec=40.90 modes={'logical': 1, 'decoder': 19} <defects>=2.1 (38s)
+L=7 beta=4.5 k=2 n=20 Tmem=1.2e+08 ± 3.2e+07  Tmem/Tec=182.65 modes={'decoder': 20} <defects>=4.9 (84s)
+L=9 beta=4.5 k=2 n=20 Tmem=9.67e+07 ± 1.9e+07  Tmem/Tec=147.25 modes={'decoder': 20} <defects>=9.1 (165s)
+L=11 beta=4.5 k=2 n=20 Tmem=1.78e+08 ± 3e+07  Tmem/Tec=271.65 modes={'decoder': 20} <defects>=10.9 (317s)
+done

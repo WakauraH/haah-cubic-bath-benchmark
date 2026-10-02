@@ -1,0 +1,6 @@
+L=5 beta=5.06 spec=(1.0, 1.0, 1.0) k=2 n=100 Tmem=6.23e+08 ± 5.8e+07 Tmem/Tec=101.0 modes={'logical': 1, 'decoder': 99} <defects>=2.0 (7s)
+L=7 beta=5.06 spec=(1.0, 1.0, 1.0) k=2 n=100 Tmem=2.1e+09 ± 2.2e+08 Tmem/Tec=339.7 modes={'decoder': 100} <defects>=2.8 (25s)
+L=9 beta=5.06 spec=(1.0, 1.0, 1.0) k=2 n=100 Tmem=6.68e+09 ± 6.5e+08 Tmem/Tec=1082.4 modes={'decoder': 100} <defects>=5.3 (114s)
+L=11 beta=5.06 spec=(1.0, 1.0, 1.0) k=2 n=100 Tmem=1.93e+10 ± 1.7e+09 Tmem/Tec=3125.6 modes={'decoder': 100} <defects>=6.7 (496s)
+L=13 beta=5.06 spec=(1.0, 1.0, 1.0) k=2 n=100 Tmem=5.4e+10 ± 4.9e+09 Tmem/Tec=8758.2 modes={'decoder': 100} <defects>=7.8 (2764s)
+done

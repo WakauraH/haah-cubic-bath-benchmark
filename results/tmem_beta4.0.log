@@ -1,0 +1,4 @@
+selftest ok: L=5 all weight-1; L=9 (k=2, pM=1) random weight-2: 1.00, weight-3: 0.96 corrected (83s)
+L=5 beta=4.0 k=2 n=10 Tmem=1.34e+06 ± 5.6e+05  (4s)
+L=7 beta=4.0 k=2 n=10 Tmem=1.82e+06 ± 7.9e+05  (12s)
+done

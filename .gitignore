@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/
+results/tmem_*_pytest*.json
+results/h2ou_*_pytest*.json
+paper/figs/*.png

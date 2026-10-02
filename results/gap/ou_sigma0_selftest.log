@@ -1,0 +1,2 @@
+L=7 beta=4.5 tau_c=1 sigma=1e-06 n=60 Tmem=8.02e+07 ± 8.7e+06 Tmem/Tec=122.2 modes={'decoder': 60} (73s)
+selftest ok (sigma->0 reproduces flat bath)

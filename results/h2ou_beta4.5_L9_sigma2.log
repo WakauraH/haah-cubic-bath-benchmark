@@ -1,0 +1,4 @@
+L=9 beta=4.5 tau_c=1 sigma=2.0 n=100 Tmem=1.92e+08 ± 1.7e+07 Tmem/Tec=292.1 modes={'decoder': 100} (195s)
+L=9 beta=4.5 tau_c=100 sigma=2.0 n=100 Tmem=2.54e+08 ± 2.7e+07 Tmem/Tec=387.2 modes={'decoder': 100} (28s)
+L=9 beta=4.5 tau_c=1e+06 sigma=2.0 n=100 Tmem=2.44e+08 ± 2.3e+07 Tmem/Tec=371.2 modes={'decoder': 100} (184s)
+done
